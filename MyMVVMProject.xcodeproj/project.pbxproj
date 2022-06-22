@@ -42,6 +42,8 @@
 		1B796E8928631E3500D3CEEE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E8828631E3500D3CEEE /* Date+Extension.swift */; };
 		1B796E8E286331C400D3CEEE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E8D286331C400D3CEEE /* Observable.swift */; };
 		1B796E902863422800D3CEEE /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E8F2863422800D3CEEE /* Alert+Extension.swift */; };
+		1B796E9A28635D4C00D3CEEE /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9928635D4C00D3CEEE /* APIKEY.swift */; };
+		1B796E9C28635F3E00D3CEEE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9B28635F3E00D3CEEE /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,9 @@
 		1B796E8828631E3500D3CEEE /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		1B796E8D286331C400D3CEEE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		1B796E8F2863422800D3CEEE /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		1B796E9628635CEB00D3CEEE /* testConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = testConfig.xcconfig; sourceTree = "<group>"; };
+		1B796E9928635D4C00D3CEEE /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
+		1B796E9B28635F3E00D3CEEE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +134,7 @@
 				1B796E302861B03900D3CEEE /* Assets.xcassets */,
 				1B796E322861B03900D3CEEE /* LaunchScreen.storyboard */,
 				1B796E352861B03900D3CEEE /* Info.plist */,
+				1B796E9628635CEB00D3CEEE /* testConfig.xcconfig */,
 			);
 			path = MyMVVMProject;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				1B796E562861B6D800D3CEEE /* APIKEY.swift */,
+				1B796E9928635D4C00D3CEEE /* APIKEY.swift */,
 				1B796E582861B81B00D3CEEE /* KaKaoModel.swift */,
 				1B796E4A2861B0F800D3CEEE /* APIService.swift */,
 				1B796E4C2861B11A00D3CEEE /* Endpoint.swift */,
@@ -217,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				1B796E8D286331C400D3CEEE /* Observable.swift */,
+				1B796E9B28635F3E00D3CEEE /* Config.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 			files = (
 				1B796E8E286331C400D3CEEE /* Observable.swift in Sources */,
 				1B796E8928631E3500D3CEEE /* Date+Extension.swift in Sources */,
+				1B796E9A28635D4C00D3CEEE /* APIKEY.swift in Sources */,
 				1B796E752862B9A200D3CEEE /* ImageEnum.swift in Sources */,
 				1B796E532861B49F00D3CEEE /* URL+Extension.swift in Sources */,
 				1B796E722862B60200D3CEEE /* UICollectionViewCell+Extension.swift in Sources */,
@@ -327,6 +336,7 @@
 				1B796E8728631A7F00D3CEEE /* DetailViewController.swift in Sources */,
 				1B796E512861B15A00D3CEEE /* APIEnum.swift in Sources */,
 				1B796E6A2862B51D00D3CEEE /* Reusable.swift in Sources */,
+				1B796E9C28635F3E00D3CEEE /* Config.swift in Sources */,
 				1B796E602862B4B400D3CEEE /* SearchView.swift in Sources */,
 				1B796E552861B5B700D3CEEE /* SearchViewModel.swift in Sources */,
 				1B796E652862B4F100D3CEEE /* BaseViewController.swift in Sources */,
@@ -474,6 +484,7 @@
 		};
 		1B796E392861B03900D3CEEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B796E9628635CEB00D3CEEE /* testConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,7 +503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bro.MyMVVMProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bro.MYMVVMProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -502,6 +513,7 @@
 		};
 		1B796E3A2861B03900D3CEEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B796E9628635CEB00D3CEEE /* testConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bro.MyMVVMProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bro.MYMVVMProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
