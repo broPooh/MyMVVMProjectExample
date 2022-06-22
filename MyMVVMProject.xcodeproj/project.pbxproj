@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B796E282861B03700D3CEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E272861B03700D3CEEE /* AppDelegate.swift */; };
 		1B796E2A2861B03700D3CEEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E292861B03700D3CEEE /* SceneDelegate.swift */; };
-		1B796E2F2861B03700D3CEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B796E2D2861B03700D3CEEE /* Main.storyboard */; };
 		1B796E312861B03900D3CEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B796E302861B03900D3CEEE /* Assets.xcassets */; };
 		1B796E342861B03900D3CEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B796E322861B03900D3CEEE /* LaunchScreen.storyboard */; };
 		1B796E3D2861B05600D3CEEE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B796E3C2861B05600D3CEEE /* SnapKit */; };
@@ -50,7 +49,6 @@
 		1B796E242861B03700D3CEEE /* MyMVVMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMVVMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B796E272861B03700D3CEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B796E292861B03700D3CEEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B796E2E2861B03700D3CEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B796E302861B03900D3CEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B796E332861B03900D3CEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B796E352861B03900D3CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				1B796E8128631A5300D3CEEE /* Detail */,
 				1B796E272861B03700D3CEEE /* AppDelegate.swift */,
 				1B796E292861B03700D3CEEE /* SceneDelegate.swift */,
-				1B796E2D2861B03700D3CEEE /* Main.storyboard */,
 				1B796E302861B03900D3CEEE /* Assets.xcassets */,
 				1B796E322861B03900D3CEEE /* LaunchScreen.storyboard */,
 				1B796E352861B03900D3CEEE /* Info.plist */,
@@ -303,7 +300,6 @@
 			files = (
 				1B796E342861B03900D3CEEE /* LaunchScreen.storyboard in Resources */,
 				1B796E312861B03900D3CEEE /* Assets.xcassets in Resources */,
-				1B796E2F2861B03700D3CEEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,14 +345,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1B796E2D2861B03700D3CEEE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B796E2E2861B03700D3CEEE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1B796E322861B03900D3CEEE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -418,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -472,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -495,7 +483,6 @@
 				INFOPLIST_FILE = MyMVVMProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,7 +511,6 @@
 				INFOPLIST_FILE = MyMVVMProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

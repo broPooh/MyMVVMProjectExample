@@ -1,0 +1,11 @@
+//
+//  testConfig.xcconfig
+//  MyMVVMProject
+//
+//  Created by bro on 2022/06/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_KEY =  d8ce07ff227bf923f979e26ef6b5abcf
