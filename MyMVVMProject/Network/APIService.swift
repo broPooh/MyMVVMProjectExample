@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIService {
+final class APIService {
 
     private init() { }
     
