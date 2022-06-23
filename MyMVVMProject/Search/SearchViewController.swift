@@ -12,10 +12,21 @@ import Toast
 class SearchViewController: BaseViewController {
     
     let searchView = SearchView()
-    let viewModel = SearchViewModel()
+    //let viewModel = SearchViewModel()
+    var viewModel: SearchViewModel!
+    
+    init(viewModel: BaseViewModel) {
+        //self.viewModel = viewModel as? SearchViewModel
+        self.viewModel = viewModel as? SearchViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private var requestSearchWorkItem: DispatchWorkItem?
-    
+        
     override func loadView() {
         self.view = searchView
     }
@@ -67,16 +78,21 @@ class SearchViewController: BaseViewController {
         }
     }
     
-    private func searchImage(query: String) {
+    private func searchImage(query: String, type: SearchType) {
         // 검색어 입력이 들어왔을때 이전 검색이 있으면, 검색 호출을 cancel
         requestSearchWorkItem?.cancel()
+        viewModel.currentPage = 1
         if (checkNetworkValue && !query.isEmpty && viewModel.query != query && !viewModel.isLoading.value) {
-            viewModel.currentPage = 1
-            requestSearchWorkItem = DispatchWorkItem { [weak self] in
-                self?.hideKeyboard()
-                self?.viewModel.searchImage(query: query)
+            
+            requestSearchWorkItem = DispatchWorkItem {
+                self.hideKeyboard()
+                self.viewModel.searchImage(query: query)
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: requestSearchWorkItem!)
+            
+            switch type {
+            case .auto: DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: requestSearchWorkItem!)
+            case .normal: DispatchQueue.main.asyncAfter(deadline: .now(), execute: requestSearchWorkItem!)
+            }
         }
     }
     
@@ -101,7 +117,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailViewController()
+        let vc = DetailViewController(viewModel: DetailViewModel() )
         vc.viewModel.kakaoImage.value = viewModel.kakaoImages.value[indexPath.row]
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
@@ -143,12 +159,13 @@ extension SearchViewController: UICollectionViewDataSourcePrefetching {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchImage(query: searchText)
+        searchImage(query: searchText, type: .auto)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchText = searchBar.text ?? ""
-        searchImage(query: searchText)
+        view.endEditing(true)
+        searchImage(query: searchText, type: .normal)
     }
     
 }

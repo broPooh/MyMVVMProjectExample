@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchViewModel {
+class SearchViewModel: BaseViewModel {
     
     var query: String = ""
     var currentPage: Int = 1

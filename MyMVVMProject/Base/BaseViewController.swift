@@ -16,6 +16,7 @@ struct NetworkManager {
 
 
 class BaseViewController: UIViewController, Reusable {
+    
     static var reuseIdentifier: String {
         return String(describing: self)
     }

@@ -10,7 +10,17 @@ import UIKit
 class DetailViewController: BaseViewController {
     
     let detailView = DetailView()
-    let viewModel = DetailViewModel()
+    //let viewModel = DetailViewModel()
+    var viewModel: DetailViewModel!
+    
+    init(viewModel: BaseViewModel) {
+        self.viewModel = viewModel as? DetailViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         self.view = detailView
