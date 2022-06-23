@@ -45,3 +45,10 @@ struct Meta: Codable {
         case isEnd = "is_end"
     }
 }
+
+
+//json 모델인데 왜 여기있을까.?
+//struct ErrorBody: Codable {
+//    let statusCode: Int
+//    let error, message: String
+//}

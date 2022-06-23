@@ -8,24 +8,6 @@
 import Foundation
 
 
-
-enum APIError: Error {
-    case invalidResponse
-    case noData
-    case failed
-    case invalidData
-    case tokenExpired
-}
-
-
-enum KaokaoAPIError: Error {
-    case invalidResponse
-    case noData
-    case failed
-    case invalidData
-    case tokenExpired
-}
-
 enum KakaoStatusCode: Int {
     case ok = 200
 }

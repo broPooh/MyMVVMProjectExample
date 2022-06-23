@@ -10,29 +10,15 @@ import UIKit
 import Toast
 
 class SearchViewController: BaseViewController {
-    
-//    let searchView = SearchView()
-//    //let viewModel = SearchViewModel()
-//    var viewModel: SearchViewModel!
-//
-//    init(viewModel: BaseViewModel) {
-//        self.viewModel = viewModel as? SearchViewModel
-//        self.viewModel = viewModel as? SearchViewModel
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
 
-    var searchView: SearchView!
-    var viewModel: SearchViewModel!
+    private var searchView: SearchView!
+    private var viewModel: BaseSearchViewModel!
     
     private var requestSearchWorkItem: DispatchWorkItem?
 
-    init(view: BaseUIView, viewModel: BaseViewModel) {
-        self.searchView = view as? SearchView
-        self.viewModel = viewModel as? SearchViewModel
+    init(view: SearchView, viewModel: BaseSearchViewModel) {
+        self.searchView = view
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 

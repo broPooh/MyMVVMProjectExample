@@ -7,10 +7,21 @@
 
 import Foundation
 
-class DetailViewModel: BaseViewModel {
-        
-    var kakaoImage: Observable<Document> = Observable(Document(collection: "", thumbnailURL: "", imageURL: "", width: 0, height: 0, displaySitename: "", docURL: "", datetime: ""))
+protocol DetailViewModelInput {
+
+}
+
+protocol DetailViewModelOutput {
+    var kakaoImage: Observable<Document> { get set }
+}
+
+
+protocol BaseDetailViewModel: DetailViewModelInput, DetailViewModelOutput { }
+
+class DetailViewModel: BaseDetailViewModel {
     
+    var kakaoImage: Observable<Document>
+
     init(kakoImage: Observable<Document>) {
         self.kakaoImage = kakoImage
     }

@@ -7,15 +7,36 @@
 
 import Foundation
 
-class SearchViewModel: BaseViewModel {
-    
+
+protocol SearchViewModelInput {
+    func searchImage(query: String)
+    func fetchImage()
+}
+
+protocol SearchViewModelOutput {
+    var query: String { get set }
+    var currentPage: Int { get set }
+    var kakaoResponse: Observable<KaKaoImageResponse> { get set }
+    var kakaoImages: Observable<[Document]> { get set }
+    var isLoading: Observable<Bool> { get set }
+}
+
+
+protocol BaseSearchViewModel: SearchViewModelInput, SearchViewModelOutput { }
+
+
+final class SearchViewModel: BaseSearchViewModel {
     var query: String = ""
     var currentPage: Int = 1
-
     var kakaoResponse: Observable<KaKaoImageResponse> = Observable(KaKaoImageResponse(meta: Meta(totalCount: 0, pageableCount: 0, isEnd: false), documents: []))
     var kakaoImages: Observable<[Document]> = Observable([])
     var isLoading: Observable<Bool> = Observable(false)
-       
+    
+}
+
+
+// MARK: - INPUT. View event methods
+extension SearchViewModel {
     func searchImage(query: String) {
         isLoading.value = true
         self.query = query
@@ -49,5 +70,4 @@ class SearchViewModel: BaseViewModel {
             }
         }
     }
-    
 }
