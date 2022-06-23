@@ -11,26 +11,39 @@ import Toast
 
 class SearchViewController: BaseViewController {
     
-    let searchView = SearchView()
-    //let viewModel = SearchViewModel()
+//    let searchView = SearchView()
+//    //let viewModel = SearchViewModel()
+//    var viewModel: SearchViewModel!
+//
+//    init(viewModel: BaseViewModel) {
+//        self.viewModel = viewModel as? SearchViewModel
+//        self.viewModel = viewModel as? SearchViewModel
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+
+    var searchView: SearchView!
     var viewModel: SearchViewModel!
     
-    init(viewModel: BaseViewModel) {
-        //self.viewModel = viewModel as? SearchViewModel
+    private var requestSearchWorkItem: DispatchWorkItem?
+
+    init(view: BaseUIView, viewModel: BaseViewModel) {
+        self.searchView = view as? SearchView
         self.viewModel = viewModel as? SearchViewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private var requestSearchWorkItem: DispatchWorkItem?
-        
+
     override func loadView() {
         self.view = searchView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -43,7 +56,7 @@ class SearchViewController: BaseViewController {
         bind()
         
     }
-
+    
     private func tableViewConfig() {
         searchView.searchCollectionView.delegate = self
         searchView.searchCollectionView.dataSource = self
@@ -117,8 +130,10 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailViewController(viewModel: DetailViewModel() )
-        vc.viewModel.kakaoImage.value = viewModel.kakaoImages.value[indexPath.row]
+        //let vc = DetailViewController(viewModel: DetailViewModel() )
+
+        let vc = DetailViewController(view: DetailView(), viewModel: DetailViewModel(kakoImage: Observable<Document>(viewModel.kakaoImages.value[indexPath.row])))
+        //vc.searchViewModel.kakaoImage.value = searchViewModel.kakaoImages.value[indexPath.row]
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

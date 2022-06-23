@@ -9,22 +9,27 @@ import UIKit
 
 class DetailViewController: BaseViewController {
     
-    let detailView = DetailView()
-    //let viewModel = DetailViewModel()
-    var viewModel: DetailViewModel!
     
-    init(viewModel: BaseViewModel) {
+    //let detailView = DetailView()
+    //let viewModel = DetailViewModel()
+    let detailView: DetailView!
+    var viewModel: DetailViewModel!
+    private var requestSearchWorkItem: DispatchWorkItem?
+
+    init(view: BaseUIView, viewModel: BaseViewModel) {
+        self.detailView = view as? DetailView
         self.viewModel = viewModel as? DetailViewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func loadView() {
         self.view = detailView
     }
+            
     
     override func viewDidLoad() {
         super.viewDidLoad()

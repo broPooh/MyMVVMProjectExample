@@ -22,7 +22,6 @@ class BaseViewController: UIViewController, Reusable {
     }
     
     var checkNetworkValue = false {
-        
         didSet {
             DispatchQueue.main.async {
                 if !self.checkNetworkValue {
