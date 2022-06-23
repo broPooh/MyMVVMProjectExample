@@ -8,7 +8,7 @@
 import Foundation
 
 struct Config {
-    private init(){}
+    private init() { }
     enum PlistKeys: String {
         case kakoApiKey = "KAKAO_KEY"
     }

@@ -69,7 +69,7 @@ final class SearchViewController: BaseViewController {
         
     private func fetchImage() {
         if (checkNetworkValue && !viewModel.kakaoResponse.value.meta.isEnd && !viewModel.isLoading.value) {
-            viewModel.currentPage += 1
+            viewModel.currentPage += SearchQuery.nextPage
             hideKeyboard()
             viewModel.fetchImage()
         } else {
@@ -80,7 +80,7 @@ final class SearchViewController: BaseViewController {
     private func searchImage(query: String, type: SearchType) {
         // 검색어 입력이 들어왔을때 이전 검색이 있으면, 검색 호출을 cancel
         requestSearchWorkItem?.cancel()
-        viewModel.currentPage = 1
+        viewModel.currentPage = SearchQuery.startPage.rawValue
         if (checkNetworkValue && !query.isEmpty && viewModel.query != query && !viewModel.isLoading.value) {
             
             requestSearchWorkItem = DispatchWorkItem { [weak self] in
@@ -89,7 +89,7 @@ final class SearchViewController: BaseViewController {
             }
             
             switch type {
-            case .auto: DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: requestSearchWorkItem!)
+            case .auto: DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(SearchQuery.queryDelay), execute: requestSearchWorkItem!)
             case .normal: DispatchQueue.main.asyncAfter(deadline: .now(), execute: requestSearchWorkItem!)
             }
         }

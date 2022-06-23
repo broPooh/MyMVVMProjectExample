@@ -13,6 +13,9 @@ enum SearchType {
 }
 
 enum SearchQuery: Int {
+    static let nextPage = 1
+    static let queryDelay = 1
+    
     case startPage = 1
     case size = 30
 }
