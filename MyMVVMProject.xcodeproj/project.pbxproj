@@ -21,7 +21,6 @@
 		1B796E512861B15A00D3CEEE /* APIEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E502861B15A00D3CEEE /* APIEnum.swift */; };
 		1B796E532861B49F00D3CEEE /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E522861B49F00D3CEEE /* URL+Extension.swift */; };
 		1B796E552861B5B700D3CEEE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E542861B5B700D3CEEE /* SearchViewModel.swift */; };
-		1B796E572861B6D800D3CEEE /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E562861B6D800D3CEEE /* APIKEY.swift */; };
 		1B796E592861B81B00D3CEEE /* KaKaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E582861B81B00D3CEEE /* KaKaoModel.swift */; };
 		1B796E5E2862B4A300D3CEEE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E5D2862B4A300D3CEEE /* SearchViewController.swift */; };
 		1B796E602862B4B400D3CEEE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E5F2862B4B400D3CEEE /* SearchView.swift */; };
@@ -41,7 +40,6 @@
 		1B796E8928631E3500D3CEEE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E8828631E3500D3CEEE /* Date+Extension.swift */; };
 		1B796E8E286331C400D3CEEE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E8D286331C400D3CEEE /* Observable.swift */; };
 		1B796E902863422800D3CEEE /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E8F2863422800D3CEEE /* Alert+Extension.swift */; };
-		1B796E9A28635D4C00D3CEEE /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9928635D4C00D3CEEE /* APIKEY.swift */; };
 		1B796E9C28635F3E00D3CEEE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9B28635F3E00D3CEEE /* Config.swift */; };
 		1B796EA02863E5F500D3CEEE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9F2863E5F500D3CEEE /* README.md */; };
 		1B796EA22863EC1C00D3CEEE /* SearchEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796EA12863EC1C00D3CEEE /* SearchEnum.swift */; };
@@ -61,7 +59,6 @@
 		1B796E502861B15A00D3CEEE /* APIEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnum.swift; sourceTree = "<group>"; };
 		1B796E522861B49F00D3CEEE /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		1B796E542861B5B700D3CEEE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		1B796E562861B6D800D3CEEE /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		1B796E582861B81B00D3CEEE /* KaKaoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoModel.swift; sourceTree = "<group>"; };
 		1B796E5D2862B4A300D3CEEE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1B796E5F2862B4B400D3CEEE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		1B796E8D286331C400D3CEEE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		1B796E8F2863422800D3CEEE /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		1B796E9628635CEB00D3CEEE /* testConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = testConfig.xcconfig; sourceTree = "<group>"; };
-		1B796E9928635D4C00D3CEEE /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		1B796E9B28635F3E00D3CEEE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1B796E9F2863E5F500D3CEEE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B796EA12863EC1C00D3CEEE /* SearchEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnum.swift; sourceTree = "<group>"; };
@@ -207,8 +203,6 @@
 		1B796E7B2862C70000D3CEEE /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1B796E562861B6D800D3CEEE /* APIKEY.swift */,
-				1B796E9928635D4C00D3CEEE /* APIKEY.swift */,
 				1B796E582861B81B00D3CEEE /* KaKaoModel.swift */,
 				1B796E4A2861B0F800D3CEEE /* APIService.swift */,
 				1B796E4C2861B11A00D3CEEE /* Endpoint.swift */,
@@ -322,11 +316,9 @@
 				1B796E8E286331C400D3CEEE /* Observable.swift in Sources */,
 				1B796EA22863EC1C00D3CEEE /* SearchEnum.swift in Sources */,
 				1B796E8928631E3500D3CEEE /* Date+Extension.swift in Sources */,
-				1B796E9A28635D4C00D3CEEE /* APIKEY.swift in Sources */,
 				1B796E752862B9A200D3CEEE /* ImageEnum.swift in Sources */,
 				1B796E532861B49F00D3CEEE /* URL+Extension.swift in Sources */,
 				1B796E722862B60200D3CEEE /* UICollectionViewCell+Extension.swift in Sources */,
-				1B796E572861B6D800D3CEEE /* APIKEY.swift in Sources */,
 				1B796E282861B03700D3CEEE /* AppDelegate.swift in Sources */,
 				1B796E8328631A6200D3CEEE /* DetailView.swift in Sources */,
 				1B796E682862B50F00D3CEEE /* ViewRepresentable.swift in Sources */,

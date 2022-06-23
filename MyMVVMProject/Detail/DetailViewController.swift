@@ -8,17 +8,13 @@
 import UIKit
 
 class DetailViewController: BaseViewController {
-    
-    
-    //let detailView = DetailView()
-    //let viewModel = DetailViewModel()
-    let detailView: DetailView!
-    var viewModel: DetailViewModel!
-    private var requestSearchWorkItem: DispatchWorkItem?
 
-    init(view: BaseUIView, viewModel: BaseViewModel) {
-        self.detailView = view as? DetailView
-        self.viewModel = viewModel as? DetailViewModel
+    private let detailView: DetailView!
+    private let viewModel: BaseDetailViewModel!
+
+    init(view: DetailView, viewModel: BaseDetailViewModel) {
+        self.detailView = view
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 

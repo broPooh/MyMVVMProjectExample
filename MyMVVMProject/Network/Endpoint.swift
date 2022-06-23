@@ -14,12 +14,6 @@ enum HTTPMethod: String {
     case DELETE
 }
 
-//json 모델인데 왜 여기있을까.?
-struct ErrorBody: Codable {
-    let statusCode: Int
-    let error, message: String
-}
-
 enum Endpoint {
     case search
 }
