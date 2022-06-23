@@ -1,5 +1,3 @@
-import Kingfisher
-import IQKeyboardManagerSwift
 # MyMVVMProject 구현간
 
 ## 고려사항
