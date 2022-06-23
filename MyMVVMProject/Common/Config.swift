@@ -7,12 +7,10 @@
 
 import Foundation
 
-enum Config {
+struct Config {
     
-    enum Keys {
-        enum Plist {
-            static let kakoApiKey = "KAKAO_KEY"
-        }
+    enum PlistKeys: String {
+        case kakoApiKey = "KAKAO_KEY"
     }
     
     // MARK: - Plist
@@ -25,7 +23,7 @@ enum Config {
     
     
     static let apiKey: String = {
-        guard let apiKey = Config.infoDictionary[Keys.Plist.kakoApiKey] as? String else {
+        guard let apiKey = Config.infoDictionary[PlistKeys.kakoApiKey.rawValue] as? String else {
             fatalError("API Key not set in plist for this environment")
         }
         return apiKey
