@@ -97,9 +97,9 @@ class SearchViewController: BaseViewController {
         viewModel.currentPage = 1
         if (checkNetworkValue && !query.isEmpty && viewModel.query != query && !viewModel.isLoading.value) {
             
-            requestSearchWorkItem = DispatchWorkItem {
-                self.hideKeyboard()
-                self.viewModel.searchImage(query: query)
+            requestSearchWorkItem = DispatchWorkItem { [weak self] in
+                self?.hideKeyboard()
+                self?.viewModel.searchImage(query: query)
             }
             
             switch type {
