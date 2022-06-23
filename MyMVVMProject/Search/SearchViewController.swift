@@ -97,6 +97,7 @@ final class SearchViewController: BaseViewController {
     
     private func hideKeyboard() {
         view.endEditing(true)
+        searchView.searchBar.resignFirstResponder()
     }
     
 }
@@ -165,7 +166,8 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchText = searchBar.text ?? ""
-        view.endEditing(true)
+        //view.endEditing(true)
+        hideKeyboard()
         searchImage(query: searchText, type: .normal)
     }
     
