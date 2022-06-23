@@ -43,7 +43,6 @@
 		1B796E9C28635F3E00D3CEEE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9B28635F3E00D3CEEE /* Config.swift */; };
 		1B796EA02863E5F500D3CEEE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E9F2863E5F500D3CEEE /* README.md */; };
 		1B796EA22863EC1C00D3CEEE /* SearchEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796EA12863EC1C00D3CEEE /* SearchEnum.swift */; };
-		1B796EA42863F0A600D3CEEE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796EA32863F0A600D3CEEE /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +80,6 @@
 		1B796E9B28635F3E00D3CEEE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1B796E9F2863E5F500D3CEEE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B796EA12863EC1C00D3CEEE /* SearchEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnum.swift; sourceTree = "<group>"; };
-		1B796EA32863F0A600D3CEEE /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +152,6 @@
 			children = (
 				1B796E622862B4DE00D3CEEE /* BaseUIView.swift */,
 				1B796E642862B4F100D3CEEE /* BaseViewController.swift */,
-				1B796EA32863F0A600D3CEEE /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -332,7 +329,6 @@
 				1B796E902863422800D3CEEE /* Alert+Extension.swift in Sources */,
 				1B796E5E2862B4A300D3CEEE /* SearchViewController.swift in Sources */,
 				1B796E8728631A7F00D3CEEE /* DetailViewController.swift in Sources */,
-				1B796EA42863F0A600D3CEEE /* BaseViewModel.swift in Sources */,
 				1B796E512861B15A00D3CEEE /* APIEnum.swift in Sources */,
 				1B796E6A2862B51D00D3CEEE /* Reusable.swift in Sources */,
 				1B796E9C28635F3E00D3CEEE /* Config.swift in Sources */,

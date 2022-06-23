@@ -9,7 +9,7 @@ import UIKit
 
 import Toast
 
-class SearchViewController: BaseViewController {
+final class SearchViewController: BaseViewController {
 
     private var searchView: SearchView!
     private var viewModel: BaseSearchViewModel!

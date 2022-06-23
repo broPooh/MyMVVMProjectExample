@@ -18,7 +18,7 @@ protocol DetailViewModelOutput {
 
 protocol BaseDetailViewModel: DetailViewModelInput, DetailViewModelOutput { }
 
-class DetailViewModel: BaseDetailViewModel {
+final class DetailViewModel: BaseDetailViewModel {
     
     var kakaoImage: Observable<Document>
 

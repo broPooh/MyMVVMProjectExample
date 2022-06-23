@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class DetailView: BaseUIView {
+final class DetailView: BaseUIView {
     
     let scrollView = UIScrollView()
     

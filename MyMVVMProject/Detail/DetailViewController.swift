@@ -7,10 +7,10 @@
 
 import UIKit
 
-class DetailViewController: BaseViewController {
+final class DetailViewController: BaseViewController {
 
-    private let detailView: DetailView!
-    private let viewModel: BaseDetailViewModel!
+    private var detailView: DetailView!
+    private var viewModel: BaseDetailViewModel!
 
     init(view: DetailView, viewModel: BaseDetailViewModel) {
         self.detailView = view

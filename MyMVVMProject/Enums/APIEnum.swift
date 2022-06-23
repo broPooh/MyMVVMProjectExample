@@ -7,6 +7,19 @@
 
 import Foundation
 
+enum NetworkHeader: String {
+    case authorization = "Authorization"
+}
+
+enum NetworkHeaderField {
+    case kakaAuthorization
+    
+    var field: String {
+        switch self {
+        case .kakaAuthorization: return "KakaoAK \(Config.apiKey)"
+        }
+    }
+}
 
 enum KakaoStatusCode: Int {
     case ok = 200

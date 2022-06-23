@@ -11,25 +11,14 @@ class APIService {
 
     private init() { }
     
-    static func searchImage(query: String, page: Int, size: Int = 30, completion: @escaping (Result<KaKaoImageResponse, KaokaoAPISearchError>) -> Void) {
-        //URLComponents -> 스트럭트 타입이라서 let으로 선언하면 QueryItem을 수정할 수 없다.
-//        guard var component = URLComponents(string: Endpoint.search.urlString) else { return }
-//        component.queryItems = [
-//            URLQueryItem(name: "query", value: "\(query)"),
-//            URLQueryItem(name: "page", value: "\(page)"),
-//            URLQueryItem(name: "size", value: "\(size)")
-//        ]
-//
-//        var request = URLRequest(url: component.url!)
-//        request.httpMethod = HTTPMethod.GET.rawValue
-//        request.setValue("KakaoAK \(Config.apiKey)", forHTTPHeaderField: "Authorization")
-        
+    static func searchImage(query: String, page: Int, size: Int = SearchQuery.size.rawValue, completion: @escaping (Result<KaKaoImageResponse, KaokaoAPISearchError>) -> Void) {
+
         guard let compoenet = makeURLComponents(url: Endpoint.search.urlString, params: [
             "query": "\(query)",
             "page" : "\(page)",
             "size" : "\(size)"
         ]) else { return }
-        let request = makeURLRequestFromComponent(component: compoenet, header: ("KakaoAK \(Config.apiKey)", "Authorization"))
+        let request = makeURLRequestFromComponent(component: compoenet, header: (NetworkHeaderField.kakaAuthorization.field, NetworkHeader.authorization.rawValue))
         
         URLSession.requestResultType(endpoint: request, completion: completion)
     }

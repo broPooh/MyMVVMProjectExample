@@ -11,3 +11,8 @@ enum SearchType {
     case auto
     case normal
 }
+
+enum SearchQuery: Int {
+    case startPage = 1
+    case size = 30
+}

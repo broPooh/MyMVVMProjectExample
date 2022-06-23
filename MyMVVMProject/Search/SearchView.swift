@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import JGProgressHUD
 
-class SearchView: BaseUIView {
+final class SearchView: BaseUIView {
     
     var searchCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
