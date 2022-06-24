@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0225952865433D00A1BDF1 /* MVVMFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0225912865427D00A1BDF1 /* MVVMFrameWork.framework */; };
+		1B0225962865433D00A1BDF1 /* MVVMFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0225912865427D00A1BDF1 /* MVVMFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B796E282861B03700D3CEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E272861B03700D3CEEE /* AppDelegate.swift */; };
 		1B796E2A2861B03700D3CEEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796E292861B03700D3CEEE /* SceneDelegate.swift */; };
 		1B796E312861B03900D3CEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B796E302861B03900D3CEEE /* Assets.xcassets */; };
@@ -45,7 +47,39 @@
 		1B796EA22863EC1C00D3CEEE /* SearchEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B796EA12863EC1C00D3CEEE /* SearchEnum.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B0225902865427D00A1BDF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B02258B2865427D00A1BDF1 /* MVVMFrameWork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B02256528653A4F00A1BDF1;
+			remoteInfo = MVVMFrameWork;
+		};
+		1B0225922865427D00A1BDF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B02258B2865427D00A1BDF1 /* MVVMFrameWork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B02256F28653A4F00A1BDF1;
+			remoteInfo = MVVMFrameWorkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B0225972865433D00A1BDF1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B0225962865433D00A1BDF1 /* MVVMFrameWork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1B02258B2865427D00A1BDF1 /* MVVMFrameWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MVVMFrameWork.xcodeproj; path = ../MVVMFrameWork/MVVMFrameWork.xcodeproj; sourceTree = "<group>"; };
 		1B796E242861B03700D3CEEE /* MyMVVMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMVVMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B796E272861B03700D3CEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B796E292861B03700D3CEEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +124,7 @@
 				1B796E402861B06200D3CEEE /* Kingfisher in Frameworks */,
 				1B796E3D2861B05600D3CEEE /* SnapKit in Frameworks */,
 				1B796E432861B06F00D3CEEE /* IQKeyboardManagerSwift in Frameworks */,
+				1B0225952865433D00A1BDF1 /* MVVMFrameWork.framework in Frameworks */,
 				1B796E802863035400D3CEEE /* Toast in Frameworks */,
 				1B796E492861B09100D3CEEE /* JGProgressHUD in Frameworks */,
 			);
@@ -98,11 +133,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B02258C2865427D00A1BDF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B0225912865427D00A1BDF1 /* MVVMFrameWork.framework */,
+				1B0225932865427D00A1BDF1 /* MVVMFrameWorkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B0225942865433D00A1BDF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1B796E1B2861B03700D3CEEE = {
 			isa = PBXGroup;
 			children = (
+				1B02258B2865427D00A1BDF1 /* MVVMFrameWork.xcodeproj */,
 				1B796E262861B03700D3CEEE /* MyMVVMProject */,
 				1B796E252861B03700D3CEEE /* Products */,
+				1B0225942865433D00A1BDF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +289,7 @@
 				1B796E202861B03700D3CEEE /* Sources */,
 				1B796E212861B03700D3CEEE /* Frameworks */,
 				1B796E222861B03700D3CEEE /* Resources */,
+				1B0225972865433D00A1BDF1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,12 +340,35 @@
 			);
 			productRefGroup = 1B796E252861B03700D3CEEE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1B02258C2865427D00A1BDF1 /* Products */;
+					ProjectRef = 1B02258B2865427D00A1BDF1 /* MVVMFrameWork.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1B796E232861B03700D3CEEE /* MyMVVMProject */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1B0225912865427D00A1BDF1 /* MVVMFrameWork.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MVVMFrameWork.framework;
+			remoteRef = 1B0225902865427D00A1BDF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B0225932865427D00A1BDF1 /* MVVMFrameWorkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MVVMFrameWorkTests.xctest;
+			remoteRef = 1B0225922865427D00A1BDF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1B796E222861B03700D3CEEE /* Resources */ = {

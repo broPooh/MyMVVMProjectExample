@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import MVVMFrameWork
 
-final class DetailViewController: BaseViewController {
-    
+final class DetailViewController: BaseViewController, PrintHelp {
+
     private var detailView: DetailView!
     private var viewModel: BaseDetailViewModel!
 
@@ -32,6 +33,11 @@ final class DetailViewController: BaseViewController {
         
         //navigationConfigure()
         bind()
+        printHelp(text: "Detail")
+    }
+    
+    func printHelp(text: String) {
+        print(text)
     }
     
     func bind() {
